@@ -1,7 +1,7 @@
 {
   "name": "@nova-engine/ecs",
   "description": "An Entity-Component-System part of the Nova MMO Engine.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "",
   "author": {
     "name": "Ramiro Rojo",
