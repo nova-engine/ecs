@@ -1,0 +1,254 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@nova-engine/ecs</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">@nova-engine/ecs</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1> @nova-engine/ecs</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<h1 id="nova-engine-entity-component-system">Nova Engine - Entity-Component-System</h1>
+				<p>An entity component system made with typescript for usage in the Nova Engine.</p>
+				<h2 id="installing">Installing</h2>
+				<pre><code class="lang-sh">npm i --save @nova-engine/ecs
+</code></pre>
+				<h2 id="basic-usage">Basic Usage</h2>
+				<p>To use the entity component system, you first must create your Engine to store your systems and entities.</p>
+				<p>You can create as many as you wish, but usually it&#39;s only one per application.</p>
+				<pre><code class="lang-ts"><span class="hljs-keyword">import</span> { Engine } <span class="hljs-keyword">from</span> <span class="hljs-string">"@nova-engine/ecs"</span>;
+<span class="hljs-keyword">const</span> engine = <span class="hljs-keyword">new</span> Engine();
+</code></pre>
+				<p>Now you just define your components:</p>
+				<pre><code class="lang-ts"><span class="hljs-keyword">import</span> { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">"@nova-engine/ecs"</span>;
+
+<span class="hljs-comment">// Components can have custom constructors, but they must be able to be initialized</span>
+<span class="hljs-comment">// with no arguments, because entities creates the instances for you.</span>
+<span class="hljs-comment">// Try not to save complex data types in yout components</span>
+<span class="hljs-keyword">class</span> PositionComponent <span class="hljs-keyword">implements</span> Component {
+  x = <span class="hljs-number">0</span>;
+  y = <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-keyword">class</span> VelocityComponent <span class="hljs-keyword">implements</span> Component {
+  x = <span class="hljs-number">0</span>;
+  y = <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-comment">// If you are making a component library, and want to avoid collitions</span>
+<span class="hljs-comment">// You can add a tag to your component implementations</span>
+
+<span class="hljs-keyword">class</span> MyLibraryComponent <span class="hljs-keyword">implements</span> Component {
+  <span class="hljs-comment">// This will ensure your component won't collide with other "MyLibraryComponent"</span>
+  <span class="hljs-keyword">static</span> readonly tag = <span class="hljs-string">"my-library/MyLibraryComponent"</span>;
+}
+</code></pre>
+				<p>You can also define your systems:</p>
+				<pre><code class="lang-ts"><span class="hljs-keyword">import</span> { Component, Family, System, FamilyBuilder } <span class="hljs-keyword">from</span> <span class="hljs-string">"@nova-engine/ecs"</span>;
+<span class="hljs-keyword">class</span> GravitySystem <span class="hljs-keyword">extends</span> System {
+  <span class="hljs-keyword">static</span> readonly DEFAULT_ACCELERATION = <span class="hljs-number">0.98</span>;
+  family?: Family;
+  acceleration: <span class="hljs-built_in">number</span>;
+
+  <span class="hljs-comment">// Constructors are free for your own implementation</span>
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">acceleration = GravitySystem.DEFAULT_ACCELERATION</span>) {
+    <span class="hljs-keyword">super</span>();
+    <span class="hljs-keyword">this</span>.acceleration = acceleration;
+    <span class="hljs-comment">// higher priorities means the system runs before others with lower priority</span>
+    <span class="hljs-keyword">this</span>.priority = <span class="hljs-number">300</span>;
+  }
+  <span class="hljs-comment">// This is called when a system is added to an engine, you may want to</span>
+  <span class="hljs-comment">// startup your families here.</span>
+  onAttach(engine: Engine) {
+    <span class="hljs-comment">// Needed to work properly</span>
+    <span class="hljs-keyword">super</span>.onAttach(engine);
+    <span class="hljs-comment">// Families are an easy way to have groups of entities with some criteria.</span>
+    <span class="hljs-keyword">this</span>.family = <span class="hljs-keyword">new</span> FamilyBuilder(engine).include(VelocityComponent).build();
+  }
+
+  <span class="hljs-comment">// This, in reality is the only method your system must implement</span>
+  <span class="hljs-comment">// but using onAttach to prepare your families is useful.</span>
+  update(engine: Engine, delta: <span class="hljs-built_in">number</span>) {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> entity of <span class="hljs-keyword">this</span>.family.entities) {
+      <span class="hljs-comment">// Easy to get a component by class</span>
+      <span class="hljs-comment">// Be warned, if the entity lacks this component, an error *will* be thrown.</span>
+      <span class="hljs-comment">// But families ensures than we will always have the required components.</span>
+      <span class="hljs-keyword">const</span> velocity = entity.getComponent(VelocityComponent);
+      velocity.y += <span class="hljs-keyword">this</span>.acceleration;
+      <span class="hljs-comment">// if the family doesn't require that component</span>
+      <span class="hljs-comment">// you can always check for it</span>
+      <span class="hljs-keyword">if</span> (entity.hasComponent(PositionComponent)) {
+        <span class="hljs-keyword">const</span> position = entity.getComponent(PositionComponent);
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-comment">// You can create components on an entity easily.</span>
+        <span class="hljs-keyword">const</span> position = entity.putComponent(PositionComponent);
+      }
+    }
+  }
+}
+</code></pre>
+				<h2 id="limitations">Limitations</h2>
+				<p>You can only have one instance of a component per entity.
+				entity IDs are not generated by default, if you need them to have IDs, set them up yourself:</p>
+				<pre><code class="lang-ts">entity.id = myGeneratedId();
+</code></pre>
+				<h2 id="license">LICENSE</h2>
+				<p>The license is Apache-2.0, so use it as you please without worries.</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_component_.html">"<wbr>Component"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_engine_.html">"<wbr>Engine"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_entity_.html">"<wbr>Entity"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_family_.html">"<wbr>Family"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_system_.html">"<wbr>System"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_index_.html">"index"</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

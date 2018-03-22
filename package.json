@@ -1,0 +1,27 @@
+{
+  "name": "@nova-engine/ecs",
+  "description": "An Entity-Component-System part of the Nova MMO Engine.",
+  "version": "1.0.0",
+  "main": "",
+  "author": {
+    "name": "Ramiro Rojo",
+    "email": "ramiro.rojo.cretta@gmail.com"
+  },
+  "scripts": {
+    "precommit": "npm build && npm docs && npm test",
+    "prepush": "npm build && npm docs && npm test",
+    "test": "mocha -r ts-node/register src/**/*.spec.ts",
+    "build": "./node_modules/.bin/tsc",
+    "docs": "typedoc --out docs --mode modules --module commonjs --target es5"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/mocha": "^2.2.48",
+    "chai": "^4.1.2",
+    "husky": "^0.14.3",
+    "mocha": "^5.0.4",
+    "ts-node": "^5.0.1",
+    "typedoc": "^0.11.1",
+    "typescript": "^2.7.2"
+  }
+}
