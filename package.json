@@ -23,5 +23,9 @@
     "ts-node": "^5.0.1",
     "typedoc": "^0.11.1",
     "typescript": "^2.7.2"
+  },
+  "repository": {
+    "type": "git+https",
+    "url": "https://github.com/nova-engine/ecs.git"
   }
 }
