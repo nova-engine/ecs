@@ -9,8 +9,8 @@
     "email": "ramiro.rojo.cretta@gmail.com"
   },
   "scripts": {
-    "precommit": "npm build && npm docs && npm test",
-    "prepush": "npm build && npm docs && npm test",
+    "precommit": "npm run build && npm run docs && npm test",
+    "prepush": "npm test",
     "test": "mocha -r ts-node/register src/**/*.spec.ts",
     "build": "./node_modules/.bin/tsc",
     "docs": "typedoc --out docs --mode modules --module commonjs --target es5"
@@ -34,8 +34,5 @@
     "url": "https://github.com/nova-engine/ecs/issues"
   },
   "homepage": "https://github.com/nova-engine/ecs#readme",
-  "keywords": [
-    "ecs",
-    "nova-engine"
-  ]
+  "keywords": ["ecs", "nova-engine"]
 }
