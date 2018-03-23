@@ -34,5 +34,8 @@
     "url": "https://github.com/nova-engine/ecs/issues"
   },
   "homepage": "https://github.com/nova-engine/ecs#readme",
-  "keywords": ["ecs", "nova-engine"]
+  "keywords": [
+    "ecs",
+    "nova-engine"
+  ]
 }

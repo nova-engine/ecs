@@ -98,6 +98,7 @@
 						<section class="tsd-index-section tsd-is-private tsd-is-private-protected tsd-is-not-exported">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-not-exported"><a href="_entity_.entity.html#_componentclasses" class="tsd-kind-icon">_component<wbr>Classes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-not-exported"><a href="_entity_.entity.html#_components" class="tsd-kind-icon">_components</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-not-exported"><a href="_entity_.entity.html#_id" class="tsd-kind-icon">_id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-not-exported"><a href="_entity_.entity.html#_listeners" class="tsd-kind-icon">_listeners</a></li>
@@ -119,6 +120,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_entity_.entity.html#isnew" class="tsd-kind-icon">is<wbr>New</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_entity_.entity.html#listcomponents" class="tsd-kind-icon">list<wbr>Components</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_entity_.entity.html#listcomponentswithtags" class="tsd-kind-icon">list<wbr>Components<wbr>With<wbr>Tags</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_entity_.entity.html#listcomponentswithtypes" class="tsd-kind-icon">list<wbr>Components<wbr>With<wbr>Types</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-not-exported"><a href="_entity_.entity.html#putcomponent" class="tsd-kind-icon">put<wbr>Component</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-not-exported"><a href="_entity_.entity.html#removecomponent" class="tsd-kind-icon">remove<wbr>Component</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_entity_.entity.html#removelistener" class="tsd-kind-icon">remove<wbr>Listener</a></li>
@@ -130,12 +132,30 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected tsd-is-not-exported">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-not-exported">
+					<a name="_componentclasses" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _component<wbr>Classes</h3>
+					<div class="tsd-signature tsd-kind-icon">_component<wbr>Classes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/4b84fcf/src/Entity.ts#L19">Entity.ts:19</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-index-signature">
+								<h5><span class="tsd-signature-symbol">[</span>tag: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><a href="../interfaces/_component_.componentclass.html" class="tsd-signature-type">ComponentClass</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_component_.component.html" class="tsd-signature-type">Component</a><span class="tsd-signature-symbol">&gt;</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-not-exported">
 					<a name="_components" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _components</h3>
 					<div class="tsd-signature tsd-kind-icon">_components<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/012e097/src/Entity.ts#L17">Entity.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/4b84fcf/src/Entity.ts#L17">Entity.ts:17</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -153,7 +173,7 @@
 					<div class="tsd-signature tsd-kind-icon">_id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/012e097/src/Entity.ts#L16">Entity.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/4b84fcf/src/Entity.ts#L16">Entity.ts:16</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -163,7 +183,7 @@
 					<div class="tsd-signature tsd-kind-icon">_listeners<span class="tsd-signature-symbol">:</span> <a href="../modules/_entity_.html#entitychangelistener" class="tsd-signature-type">EntityChangeListener</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/012e097/src/Entity.ts#L18">Entity.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/4b84fcf/src/Entity.ts#L18">Entity.ts:18</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -181,7 +201,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/012e097/src/Entity.ts#L24">Entity.ts:24</a></li>
+									<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/4b84fcf/src/Entity.ts#L27">Entity.ts:27</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -202,7 +222,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/012e097/src/Entity.ts#L35">Entity.ts:35</a></li>
+									<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/4b84fcf/src/Entity.ts#L38">Entity.ts:38</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -238,7 +258,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/012e097/src/Entity.ts#L175">Entity.ts:175</a></li>
+									<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/4b84fcf/src/Entity.ts#L193">Entity.ts:193</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -269,7 +289,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/012e097/src/Entity.ts#L164">Entity.ts:164</a></li>
+									<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/4b84fcf/src/Entity.ts#L182">Entity.ts:182</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -312,7 +332,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/012e097/src/Entity.ts#L97">Entity.ts:97</a></li>
+									<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/4b84fcf/src/Entity.ts#L113">Entity.ts:113</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -357,7 +377,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/012e097/src/Entity.ts#L79">Entity.ts:79</a></li>
+									<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/4b84fcf/src/Entity.ts#L95">Entity.ts:95</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -399,7 +419,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/012e097/src/Entity.ts#L49">Entity.ts:49</a></li>
+									<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/4b84fcf/src/Entity.ts#L52">Entity.ts:52</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -422,7 +442,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/012e097/src/Entity.ts#L57">Entity.ts:57</a></li>
+									<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/4b84fcf/src/Entity.ts#L60">Entity.ts:60</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -445,16 +465,40 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/012e097/src/Entity.ts#L65">Entity.ts:65</a></li>
+									<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/4b84fcf/src/Entity.ts#L81">Entity.ts:81</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Generates a read only list of components of the entity with tags.</p>
+									<p>Generates a read only list of components of the entity with it&#39;s corresponding tags.</p>
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span></h4>
 							<p>a list of all components with tags of the entity.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="listcomponentswithtypes" class="tsd-anchor"></a>
+					<h3>list<wbr>Components<wbr>With<wbr>Types</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">list<wbr>Components<wbr>With<wbr>Types<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/4b84fcf/src/Entity.ts#L70">Entity.ts:70</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Generates a read only list of components of the entity
+									with it&#39;s corresponding types.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span></h4>
+							<p>a list of all components with types of the entity.</p>
 						</li>
 					</ul>
 				</section>
@@ -468,7 +512,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/012e097/src/Entity.ts#L117">Entity.ts:117</a></li>
+									<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/4b84fcf/src/Entity.ts#L133">Entity.ts:133</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -511,7 +555,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/012e097/src/Entity.ts#L142">Entity.ts:142</a></li>
+									<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/4b84fcf/src/Entity.ts#L160">Entity.ts:160</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -556,7 +600,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/012e097/src/Entity.ts#L187">Entity.ts:187</a></li>
+									<li>Defined in <a href="https://github.com/nova-engine/ecs/blob/4b84fcf/src/Entity.ts#L205">Entity.ts:205</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -613,6 +657,9 @@
 						<a href="_entity_.entity.html" class="tsd-kind-icon">Entity</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-not-exported">
+								<a href="_entity_.entity.html#_componentclasses" class="tsd-kind-icon">_component<wbr>Classes</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-not-exported">
 								<a href="_entity_.entity.html#_components" class="tsd-kind-icon">_components</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-not-exported">
@@ -644,6 +691,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
 								<a href="_entity_.entity.html#listcomponentswithtags" class="tsd-kind-icon">list<wbr>Components<wbr>With<wbr>Tags</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="_entity_.entity.html#listcomponentswithtypes" class="tsd-kind-icon">list<wbr>Components<wbr>With<wbr>Types</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-not-exported">
 								<a href="_entity_.entity.html#putcomponent" class="tsd-kind-icon">put<wbr>Component</a>

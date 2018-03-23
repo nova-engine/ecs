@@ -16,6 +16,9 @@ class Entity {
   private _id: string | number | null = null;
   private readonly _components: { [tag: string]: Component } = {};
   private readonly _listeners: EntityChangeListener[] = [];
+  private readonly _componentClasses: {
+    [tag: string]: ComponentClass<Component>;
+  } = {};
 
   /**
    * Gets the id of the entity.
@@ -59,7 +62,20 @@ class Entity {
   }
 
   /**
-   * Generates a read only list of components of the entity with tags.
+   * Generates a read only list of components of the entity
+   * with it's corresponding types.
+   * @returns a list of all components with types of the entity.
+   */
+
+  listComponentsWithTypes() {
+    return Object.keys(this._components).map(i => ({
+      component: this._components[i],
+      type: this._componentClasses[i]
+    }));
+  }
+
+  /**
+   * Generates a read only list of components of the entity with it's corresponding tags.
    * @returns a list of all components with tags of the entity.
    */
   listComponentsWithTags() {
@@ -124,9 +140,11 @@ class Entity {
         );
       }
       delete this._components[tag];
+      delete this._componentClasses[tag];
     }
     const newComponent = new componentClass();
     this._components[tag] = newComponent;
+    this._componentClasses[tag] = componentClass;
     for (let listener of this._listeners) {
       listener(this);
     }
