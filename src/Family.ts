@@ -113,7 +113,7 @@ class CachedFamily extends AbstractFamily {
     const index = this._entities.indexOf(entity);
     if (index === -1) {
       this._entities.push(entity);
-      entity.addListener(this.onEntityChanged);
+      entity.addListener(this.onEntityChanged.bind(this));
     }
     this._needEntityRefresh = true;
   };
