@@ -1,6 +1,10 @@
 import { ComponentClass, Component } from "./Component";
 
-type EntityChangeListener = (entity: Entity) => any;
+// type EntityChangeListener = (entity: Entity) => any;
+
+interface EntityChangeListener {
+  onEntityChanged(entity: Entity): void;
+}
 
 /**
  * An Entity is every object you may have on your system.
@@ -146,7 +150,7 @@ class Entity {
     this._components[tag] = newComponent;
     this._componentClasses[tag] = componentClass;
     for (let listener of this._listeners) {
-      listener(this);
+      listener.onEntityChanged(this);
     }
     return newComponent;
   }
@@ -170,7 +174,7 @@ class Entity {
     }
     delete this._components[tag];
     for (let listener of this._listeners) {
-      listener(this);
+      listener.onEntityChanged(this);
     }
   }
 
