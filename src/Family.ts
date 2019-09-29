@@ -1,6 +1,6 @@
 import { Component, ComponentClass } from "./Component";
 import { Engine, EngineEntityListener } from "./Engine";
-import { Entity } from "./Entity";
+import { Entity, EntityChangeListener } from "./Entity";
 
 /**
  * A family is a criteria to separate your entities.
@@ -64,7 +64,7 @@ abstract class AbstractFamily implements Family {
  * when an entity changes.
  *
  */
-class CachedFamily extends AbstractFamily {
+class CachedFamily extends AbstractFamily implements EntityChangeListener {
   private _needEntityRefresh: boolean;
   private _entities: Entity[];
 
@@ -78,7 +78,7 @@ class CachedFamily extends AbstractFamily {
     this._entities = allEntities.filter(this.includesEntity);
     this.engine.addEntityListener(this);
     for (let entity of allEntities) {
-      entity.addListener(this.onEntityAdded);
+      entity.addListener(this);
     }
     this._needEntityRefresh = false;
   }
@@ -96,7 +96,7 @@ class CachedFamily extends AbstractFamily {
     if (index === -1) {
       this._entities.push(entity);
       this._needEntityRefresh = true;
-      entity.addListener(this.onEntityChanged);
+      entity.addListener(this);
     }
   }
 
@@ -105,18 +105,13 @@ class CachedFamily extends AbstractFamily {
     if (index !== -1) {
       const entity = this._entities[index];
       this._entities.splice(index, 1);
-      entity.removeListener(this.onEntityChanged);
+      entity.removeListener(this);
     }
   }
-
-  onEntityChanged = (entity: Entity) => {
-    const index = this._entities.indexOf(entity);
-    if (index === -1) {
-      this._entities.push(entity);
-      entity.addListener(this.onEntityChanged);
-    }
+  
+  onEntityChanged(entity: Entity): void {
     this._needEntityRefresh = true;
-  };
+  }
 }
 
 /**

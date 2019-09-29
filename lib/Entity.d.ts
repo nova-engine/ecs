@@ -1,5 +1,7 @@
 import { ComponentClass, Component } from "./Component";
-declare type EntityChangeListener = (entity: Entity) => any;
+interface EntityChangeListener {
+    onEntityChanged(entity: Entity): void;
+}
 declare class Entity {
     private _id;
     private readonly _components;
