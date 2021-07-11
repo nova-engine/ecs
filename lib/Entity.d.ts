@@ -7,7 +7,8 @@ declare class Entity {
     private readonly _components;
     private readonly _listeners;
     private readonly _componentClasses;
-    id: string | number;
+    get id(): string | number;
+    set id(value: string | number);
     isNew(): boolean;
     listComponents(): Component[];
     listComponentsWithTypes(): {

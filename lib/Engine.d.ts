@@ -9,7 +9,7 @@ declare class Engine {
     private readonly _entityListeners;
     private readonly _systems;
     private _systemsNeedSorting;
-    readonly entities: ReadonlyArray<Entity>;
+    get entities(): readonly Entity[];
     notifyPriorityChange(system: System): void;
     addEntityListener(listener: EngineEntityListener): this;
     removeEntityListener(listener: EngineEntityListener): this;
