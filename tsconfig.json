@@ -17,5 +17,10 @@
     "types": ["jest"]
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "exclude": ["node_modules", "**/*.spec.ts"],
+  "typedocOptions": {
+    "out": "docs",
+    "entryPoints": "src/index.ts",
+    "exclude": ["**/*.spec.ts*", "**/*.spec.tsx*"]
+  }
 }
