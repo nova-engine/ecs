@@ -16,11 +16,7 @@
     "docs": "typedoc --out docs --mode modules --module commonjs --target es5"
   },
   "devDependencies": {
-    "@types/chai": "^4.1.2",
-    "@types/mocha": "^2.2.48",
-    "chai": "^4.1.2",
     "husky": "^0.14.3",
-    "mocha": "^5.0.4",
     "ts-node": "^5.0.1",
     "typedoc": "^0.11.1",
     "typescript": "^2.7.2"
