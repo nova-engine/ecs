@@ -3,15 +3,15 @@ import { Engine } from "./Engine";
 import { Entity, EntityChangeListener } from "./Entity";
 
 /**
- * A family is a criteria to separate your entities.
- * You can have families on wich entities must have a component,
+ * A signature is a criteria to separate your entities.
+ * You can have signatures on wich entities must have a component,
  * entities cannot have some components or a mix of both.
- * Families also cache the entities of the engine by default,
+ * Signatures also cache the entities of the engine by default,
  * so you won't have to worry about filtering entities every time.
  */
-interface Family {
+interface Signature {
   /**
-   * Computes a list of entities on the family.
+   * Computes a list of entities on the signature.
    * The list may or may not be cached, depending of implementation.
    */
   readonly entities: ReadonlyArray<Entity>;
@@ -19,11 +19,11 @@ interface Family {
 }
 
 /**
- * An abstract family is the base implementation of a family interface.
+ * An abstract signature is the base implementation of a signature interface.
  * This class is private to this module.
  * @private
  */
-abstract class AbstractFamily implements Family {
+abstract class AbstractSignature implements Signature {
   private readonly _engine: Engine;
   private readonly _include: ReadonlyArray<ComponentClass<Component>>;
   private readonly _exclude: ReadonlyArray<ComponentClass<Component>>;
@@ -60,11 +60,11 @@ abstract class AbstractFamily implements Family {
 }
 
 /**
- * A CachedFamily is a family than caches it's results and alters it only
+ * A CachedSignature is a signature than caches it's results and alters it only
  * when an entity changes.
  *
  */
-class CachedFamily extends AbstractFamily implements EntityChangeListener {
+class CachedSignature extends AbstractSignature implements EntityChangeListener {
   private _needEntityRefresh: boolean;
   private _entities: Entity[];
 
@@ -115,22 +115,22 @@ class CachedFamily extends AbstractFamily implements EntityChangeListener {
 }
 
 /**
- * A NonCacheFamily always computes the members of it.
- * If you find than the performance from cached families is not decent.
+ * A NonCacheSignature always computes the members of it.
+ * If you find than the performance from cached signatures is not decent.
  * You can use this instead.
  * @private
  */
-class NonCachedFamily extends AbstractFamily {
+class NonCachedSignature extends AbstractSignature {
   get entities() {
     return this.engine.entities.filter(this.includesEntity);
   }
 }
 
 /**
- * Utility class to build Families.
- * It's the only way to create the implementations of CachedFamily and NonCachedFamily.
+ * Utility class to build Signatures.
+ * It's the only way to create the implementations of CachedSignature and NonCachedSignature.
  */
-class FamilyBuilder {
+class SignatureBuilder {
   private _engine: Engine | null;
   private _cached: boolean;
   private readonly _include: ComponentClass<Component>[];
@@ -148,7 +148,7 @@ class FamilyBuilder {
    * HAVE this components.
    * @param classes A list of component classes.
    */
-  include(...classes: ComponentClass<Component>[]): FamilyBuilder {
+  include(...classes: ComponentClass<Component>[]): SignatureBuilder {
     this._include.push(...classes);
     return this;
   }
@@ -157,43 +157,43 @@ class FamilyBuilder {
    * HAVE this components.
    * @param classes A list of component classes.
    */
-  exclude(...classes: ComponentClass<Component>[]): FamilyBuilder {
+  exclude(...classes: ComponentClass<Component>[]): SignatureBuilder {
     this._exclude.push(...classes);
     return this;
   }
 
   /**
    * Changes the engine of the builder.
-   * Useful to create multiple instances of the same family for different
+   * Useful to create multiple instances of the same signature for different
    * engines.
    * @param engine
    */
-  changeEngine(engine: Engine): FamilyBuilder {
+  changeEngine(engine: Engine): SignatureBuilder {
     this._engine = engine;
     return this;
   }
 
   /**
-   * Changes if the family should use cached values or not.
-   * @param cached If the family must use or not a cache.
+   * Changes if the signature should use cached values or not.
+   * @param cached If the signature must use or not a cache.
    */
   setCached(cached: boolean): void {
     this._cached = cached;
   }
 
   /**
-   * Builds the family, using the information provided.
-   * @returns a new family to retrieve the entities.
+   * Builds the signature, using the information provided.
+   * @returns a new signature to retrieve the entities.
    */
-  build(): Family {
+  build(): Signature {
     if (!this._engine) {
-      throw new Error("Family should always belong to an engine.");
+      throw new Error("Signature should always belong to an engine.");
     }
     if (!this._cached) {
-      return new NonCachedFamily(this._engine, this._include, this._exclude);
+      return new NonCachedSignature(this._engine, this._include, this._exclude);
     }
-    return new CachedFamily(this._engine, this._include, this._exclude);
+    return new CachedSignature(this._engine, this._include, this._exclude);
   }
 }
 
-export { Family, FamilyBuilder };
+export { Signature, SignatureBuilder };

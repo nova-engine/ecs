@@ -2,7 +2,7 @@ import * as lib from "./index";
 
 import { Engine } from "./Engine";
 import { Entity } from "./Entity";
-import { FamilyBuilder } from "./Family";
+import { SignatureBuilder } from "./Signature";
 import { System } from "./System";
 
 describe("Modules are exported", function () {
@@ -16,10 +16,10 @@ describe("Modules are exported", function () {
     expect(lib.Entity).not.toBeNull();
     expect(lib.Entity).not.toBeUndefined();
   });
-  it("FamilyBuilder is exported", function () {
-    expect(lib.FamilyBuilder).toEqual(FamilyBuilder);
-    expect(lib.FamilyBuilder).not.toBeNull();
-    expect(lib.FamilyBuilder).not.toBeUndefined();
+  it("SignatureBuilder is exported", function () {
+    expect(lib.SignatureBuilder).toEqual(SignatureBuilder);
+    expect(lib.SignatureBuilder).not.toBeNull();
+    expect(lib.SignatureBuilder).not.toBeUndefined();
   });
   it("System is exported", function () {
     expect(lib.System).toEqual(System);
