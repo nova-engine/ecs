@@ -9,6 +9,7 @@
     "removeComments": true,
     "preserveConstEnums": true,
     "experimentalDecorators": true,
+    "skipLibCheck": true,
     "outDir": "lib",
     "baseUrl": "src",
     "paths": { "src/*": ["src/*"] },
@@ -22,6 +23,6 @@
   "typedocOptions": {
     "out": "docs",
     "entryPoints": "src/index.ts",
-    "exclude": ["**/*.spec.ts*", "**/*.spec.tsx*"]
+    "exclude": ["**/*.spec.ts", "**/*.spec.tsx", "node_modules"]
   }
 }
