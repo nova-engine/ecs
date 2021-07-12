@@ -38,8 +38,6 @@
 							</div>
 							<input type="checkbox" id="tsd-filter-inherited" checked />
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
-							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
 							<input type="checkbox" id="tsd-filter-only-exported" />
 							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
@@ -62,7 +60,7 @@
 					<a href="_component_.componentclass.html">ComponentClass</a>
 				</li>
 			</ul>
-			<h1>Interface ComponentClass&lt;T&gt;</h1>
+			<h1>Interface ComponentClass&lt;T, U&gt;</h1>
 		</div>
 	</div>
 </header>
@@ -74,6 +72,9 @@
 				<ul class="tsd-type-parameters">
 					<li>
 						<h4>T<span class="tsd-signature-symbol">: </span><a href="_component_.component.html" class="tsd-signature-type">Component</a></h4>
+					</li>
+					<li>
+						<h4>U</h4>
 					</li>
 				</ul>
 			</section>
@@ -111,15 +112,21 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Component<wbr>Class<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Component<wbr>Class<span class="tsd-signature-symbol">(</span>payload<span class="tsd-signature-symbol">?: </span><a href="../modules/_reflect_.html#baseconstructorpayload" class="tsd-signature-type">BaseConstructorPayload</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Component.ts:5</li>
+									<li>Defined in <a href="https://github.com/joaqim/ecs/blob/7a29e66/src/Component.ts#L8">Component.ts:8</a></li>
 								</ul>
 							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> payload: <a href="../modules/_reflect_.html#baseconstructorpayload" class="tsd-signature-type">BaseConstructorPayload</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
 						</li>
 					</ul>
@@ -133,7 +140,7 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in Component.ts:4</li>
+							<li>Defined in <a href="https://github.com/joaqim/ecs/blob/7a29e66/src/Component.ts#L7">Component.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -143,7 +150,7 @@
 					<div class="tsd-signature tsd-kind-icon">tag<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in Component.ts:5</li>
+							<li>Defined in <a href="https://github.com/joaqim/ecs/blob/7a29e66/src/Component.ts#L8">Component.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -166,6 +173,9 @@
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_family_.html">"<wbr>Family"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_reflect_.html">"<wbr>Reflect"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_system_.html">"<wbr>System"</a>

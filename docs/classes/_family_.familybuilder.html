@@ -38,8 +38,6 @@
 							</div>
 							<input type="checkbox" id="tsd-filter-inherited" checked />
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
-							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
 							<input type="checkbox" id="tsd-filter-only-exported" />
 							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
@@ -69,14 +67,6 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Utility class to build Families.
-						It&#39;s the only way to create the implementations of CachedFamily and NonCachedFamily.</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -123,19 +113,19 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Family<wbr>Builder<span class="tsd-signature-symbol">(</span>engine<span class="tsd-signature-symbol">?: </span><a href="_engine_.engine.html" class="tsd-signature-type">Engine</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_family_.familybuilder.html" class="tsd-signature-type">FamilyBuilder</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Family<wbr>Builder<span class="tsd-signature-symbol">(</span>engine<span class="tsd-signature-symbol">?: </span><a href="_system_.system.html#engine" class="tsd-signature-type">Engine</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_family_.familybuilder.html" class="tsd-signature-type">FamilyBuilder</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Family.ts:142</li>
+									<li>Defined in <a href="https://github.com/joaqim/ecs/blob/7a29e66/src/Family.ts#L137">Family.ts:137</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> engine: <a href="_engine_.engine.html" class="tsd-signature-type">Engine</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> engine: <a href="_system_.system.html#engine" class="tsd-signature-type">Engine</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_family_.familybuilder.html" class="tsd-signature-type">FamilyBuilder</a></h4>
@@ -151,7 +141,7 @@
 					<div class="tsd-signature tsd-kind-icon">_cached<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in Family.ts:140</li>
+							<li>Defined in <a href="https://github.com/joaqim/ecs/blob/7a29e66/src/Family.ts#L135">Family.ts:135</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -161,7 +151,7 @@
 					<div class="tsd-signature tsd-kind-icon">_engine<span class="tsd-signature-symbol">:</span> <a href="_engine_.engine.html" class="tsd-signature-type">Engine</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in Family.ts:139</li>
+							<li>Defined in <a href="https://github.com/joaqim/ecs/blob/7a29e66/src/Family.ts#L134">Family.ts:134</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -171,7 +161,7 @@
 					<div class="tsd-signature tsd-kind-icon">_exclude<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_component_.componentclass.html" class="tsd-signature-type">ComponentClass</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_component_.component.html" class="tsd-signature-type">Component</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in Family.ts:142</li>
+							<li>Defined in <a href="https://github.com/joaqim/ecs/blob/7a29e66/src/Family.ts#L137">Family.ts:137</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -181,7 +171,7 @@
 					<div class="tsd-signature tsd-kind-icon">_include<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_component_.componentclass.html" class="tsd-signature-type">ComponentClass</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_component_.component.html" class="tsd-signature-type">Component</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in Family.ts:141</li>
+							<li>Defined in <a href="https://github.com/joaqim/ecs/blob/7a29e66/src/Family.ts#L136">Family.ts:136</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -198,14 +188,9 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Family.ts:193</li>
+									<li>Defined in <a href="https://github.com/joaqim/ecs/blob/7a29e66/src/Family.ts#L188">Family.ts:188</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Builds the family, using the information provided.</p>
-								</div>
-							</div>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_family_.family.html" class="tsd-signature-type">Family</a></h4>
 							<p>a new family to retrieve the entities.</p>
 						</li>
@@ -215,31 +200,22 @@
 					<a name="changeengine" class="tsd-anchor"></a>
 					<h3>change<wbr>Engine</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">change<wbr>Engine<span class="tsd-signature-symbol">(</span>engine<span class="tsd-signature-symbol">: </span><a href="_engine_.engine.html" class="tsd-signature-type">Engine</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+						<li class="tsd-signature tsd-kind-icon">change<wbr>Engine<span class="tsd-signature-symbol">(</span>engine<span class="tsd-signature-symbol">: </span><a href="_engine_.engine.html" class="tsd-signature-type">Engine</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_family_.familybuilder.html" class="tsd-signature-type">FamilyBuilder</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Family.ts:176</li>
+									<li>Defined in <a href="https://github.com/joaqim/ecs/blob/7a29e66/src/Family.ts#L171">Family.ts:171</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Changes the engine of the builder.
-										Useful to create multiple instances of the same family for different
-									engines.</p>
-								</div>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>engine: <a href="_engine_.engine.html" class="tsd-signature-type">Engine</a></h5>
-									<div class="tsd-comment tsd-typography">
-									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="_family_.familybuilder.html" class="tsd-signature-type">FamilyBuilder</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -247,31 +223,22 @@
 					<a name="exclude" class="tsd-anchor"></a>
 					<h3>exclude</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">exclude<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>classes<span class="tsd-signature-symbol">: </span><a href="../interfaces/_component_.componentclass.html" class="tsd-signature-type">ComponentClass</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_component_.component.html" class="tsd-signature-type">Component</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+						<li class="tsd-signature tsd-kind-icon">exclude<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>classes<span class="tsd-signature-symbol">: </span><a href="../interfaces/_component_.componentclass.html" class="tsd-signature-type">ComponentClass</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_component_.component.html" class="tsd-signature-type">Component</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_family_.familybuilder.html" class="tsd-signature-type">FamilyBuilder</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Family.ts:165</li>
+									<li>Defined in <a href="https://github.com/joaqim/ecs/blob/7a29e66/src/Family.ts#L160">Family.ts:160</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Indicates than entities than are members of this class MUST NOT
-									HAVE this components.</p>
-								</div>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>classes: <a href="../interfaces/_component_.componentclass.html" class="tsd-signature-type">ComponentClass</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_component_.component.html" class="tsd-signature-type">Component</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>A list of component classes.</p>
-									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="_family_.familybuilder.html" class="tsd-signature-type">FamilyBuilder</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -279,31 +246,22 @@
 					<a name="include" class="tsd-anchor"></a>
 					<h3>include</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">include<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>classes<span class="tsd-signature-symbol">: </span><a href="../interfaces/_component_.componentclass.html" class="tsd-signature-type">ComponentClass</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_component_.component.html" class="tsd-signature-type">Component</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+						<li class="tsd-signature tsd-kind-icon">include<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>classes<span class="tsd-signature-symbol">: </span><a href="../interfaces/_component_.componentclass.html" class="tsd-signature-type">ComponentClass</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_component_.component.html" class="tsd-signature-type">Component</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_family_.familybuilder.html" class="tsd-signature-type">FamilyBuilder</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Family.ts:156</li>
+									<li>Defined in <a href="https://github.com/joaqim/ecs/blob/7a29e66/src/Family.ts#L151">Family.ts:151</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Indicates than entities than are members of this class MUST
-									HAVE this components.</p>
-								</div>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>classes: <a href="../interfaces/_component_.componentclass.html" class="tsd-signature-type">ComponentClass</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_component_.component.html" class="tsd-signature-type">Component</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>A list of component classes.</p>
-									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="_family_.familybuilder.html" class="tsd-signature-type">FamilyBuilder</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -317,21 +275,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Family.ts:185</li>
+									<li>Defined in <a href="https://github.com/joaqim/ecs/blob/7a29e66/src/Family.ts#L180">Family.ts:180</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Changes if the family should use cached values or not.</p>
-								</div>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>cached: <span class="tsd-signature-type">boolean</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>If the family must use or not a cache.</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -357,6 +307,9 @@
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_family_.html">"<wbr>Family"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_reflect_.html">"<wbr>Reflect"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_system_.html">"<wbr>System"</a>

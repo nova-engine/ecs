@@ -38,8 +38,6 @@
 							</div>
 							<input type="checkbox" id="tsd-filter-inherited" checked />
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
-							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
 							<input type="checkbox" id="tsd-filter-only-exported" />
 							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
@@ -69,15 +67,6 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>An engine is the class than combines systems and entities.
-							You may have one Engine in your application, but you can make as many as
-						you want.</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -86,13 +75,18 @@
 					</li>
 				</ul>
 			</section>
+			<section class="tsd-panel tsd-kind-class tsd-parent-kind-external-module tsd-is-not-exported">
+				<h3 class="tsd-before-signature">Indexable</h3>
+				<div class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">any</span></div>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section tsd-is-private tsd-is-private-protected tsd-is-not-exported">
+						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-not-exported"><a href="_engine_.engine.html#entity" class="tsd-kind-icon">Entity</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-not-exported"><a href="_engine_.engine.html#_entities" class="tsd-kind-icon">_entities</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-not-exported"><a href="_engine_.engine.html#_entitylisteners" class="tsd-kind-icon">_entity<wbr>Listeners</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-not-exported"><a href="_engine_.engine.html#_systems" class="tsd-kind-icon">_systems</a></li>
@@ -105,42 +99,30 @@
 								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-not-exported"><a href="_engine_.engine.html#entities" class="tsd-kind-icon">entities</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-not-exported">
-							<h3>Methods</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_engine_.engine.html#addentities" class="tsd-kind-icon">add<wbr>Entities</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_engine_.engine.html#addentity" class="tsd-kind-icon">add<wbr>Entity</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_engine_.engine.html#addentitylistener" class="tsd-kind-icon">add<wbr>Entity<wbr>Listener</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_engine_.engine.html#addsystem" class="tsd-kind-icon">add<wbr>System</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_engine_.engine.html#addsystems" class="tsd-kind-icon">add<wbr>Systems</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_engine_.engine.html#notifyprioritychange" class="tsd-kind-icon">notify<wbr>Priority<wbr>Change</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_engine_.engine.html#removeentities" class="tsd-kind-icon">remove<wbr>Entities</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_engine_.engine.html#removeentity" class="tsd-kind-icon">remove<wbr>Entity</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_engine_.engine.html#removeentitylistener" class="tsd-kind-icon">remove<wbr>Entity<wbr>Listener</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_engine_.engine.html#removesystem" class="tsd-kind-icon">remove<wbr>System</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_engine_.engine.html#removesystems" class="tsd-kind-icon">remove<wbr>Systems</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_engine_.engine.html#update" class="tsd-kind-icon">update</a></li>
-							</ul>
-						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected tsd-is-not-exported">
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+					<a name="entity" class="tsd-anchor"></a>
+					<h3>Entity</h3>
+					<div class="tsd-signature tsd-kind-icon">Entity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/joaqim/ecs/blob/7a29e66/src/Engine.ts#L26">Engine.ts:26</a></li>
+						</ul>
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-not-exported">
 					<a name="_entities" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _entities</h3>
 					<div class="tsd-signature tsd-kind-icon">_entities<span class="tsd-signature-symbol">:</span> <a href="_entity_.entity.html" class="tsd-signature-type">Entity</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in Engine.ts:16</li>
+							<li>Defined in <a href="https://github.com/joaqim/ecs/blob/7a29e66/src/Engine.ts#L16">Engine.ts:16</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Private array containing the current list of added entities.</p>
-						</div>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-not-exported">
 					<a name="_entitylisteners" class="tsd-anchor"></a>
@@ -148,14 +130,9 @@
 					<div class="tsd-signature tsd-kind-icon">_entity<wbr>Listeners<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_engine_.engineentitylistener.html" class="tsd-signature-type">EngineEntityListener</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in Engine.ts:18</li>
+							<li>Defined in <a href="https://github.com/joaqim/ecs/blob/7a29e66/src/Engine.ts#L18">Engine.ts:18</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Private list of entity listeners</p>
-						</div>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-not-exported">
 					<a name="_systems" class="tsd-anchor"></a>
@@ -163,14 +140,9 @@
 					<div class="tsd-signature tsd-kind-icon">_systems<span class="tsd-signature-symbol">:</span> <a href="_system_.system.html" class="tsd-signature-type">System</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in Engine.ts:20</li>
+							<li>Defined in <a href="https://github.com/joaqim/ecs/blob/7a29e66/src/Engine.ts#L20">Engine.ts:20</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Private list of added systems.</p>
-						</div>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-not-exported">
 					<a name="_systemsneedsorting" class="tsd-anchor"></a>
@@ -178,14 +150,9 @@
 					<div class="tsd-signature tsd-kind-icon">_systems<wbr>Need<wbr>Sorting<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in Engine.ts:22</li>
+							<li>Defined in <a href="https://github.com/joaqim/ecs/blob/7a29e66/src/Engine.ts#L22">Engine.ts:22</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Checks if the system needs sorting of some sort</p>
-						</div>
-					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
@@ -193,403 +160,12 @@
 				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-not-exported">
 					<a name="entities" class="tsd-anchor"></a>
 					<h3>entities</h3>
-					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> entities<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ReadonlyArray</span><span class="tsd-signature-symbol">&lt;</span><a href="_entity_.entity.html" class="tsd-signature-type">Entity</a><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in Engine.ts:26</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Computes an immutable list of entities added to the engine.</p>
-								</div>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ReadonlyArray</span><span class="tsd-signature-symbol">&lt;</span><a href="_entity_.entity.html" class="tsd-signature-type">Entity</a><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-					<a name="addentities" class="tsd-anchor"></a>
-					<h3>add<wbr>Entities</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Entities<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>entities<span class="tsd-signature-symbol">: </span><a href="_entity_.entity.html" class="tsd-signature-type">Entity</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in Engine.ts:80</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Add a list of entities to the engine.
-									The listeners will be notified once per entity.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>entities: <a href="_entity_.entity.html" class="tsd-signature-type">Entity</a><span class="tsd-signature-symbol">[]</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The list of entities to add</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-					<a name="addentity" class="tsd-anchor"></a>
-					<h3>add<wbr>Entity</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Entity<span class="tsd-signature-symbol">(</span>entity<span class="tsd-signature-symbol">: </span><a href="_entity_.entity.html" class="tsd-signature-type">Entity</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in Engine.ts:65</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Add an entity to the engine.
-									The listeners will be notified.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>entity: <a href="_entity_.entity.html" class="tsd-signature-type">Entity</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The entity to add</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-					<a name="addentitylistener" class="tsd-anchor"></a>
-					<h3>add<wbr>Entity<wbr>Listener</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Entity<wbr>Listener<span class="tsd-signature-symbol">(</span>listener<span class="tsd-signature-symbol">: </span><a href="../interfaces/_engine_.engineentitylistener.html" class="tsd-signature-type">EngineEntityListener</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in Engine.ts:41</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Adds a listener for when entities are added or removed.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>listener: <a href="../interfaces/_engine_.engineentitylistener.html" class="tsd-signature-type">EngineEntityListener</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The listener waiting to add</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-					<a name="addsystem" class="tsd-anchor"></a>
-					<h3>add<wbr>System</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>System<span class="tsd-signature-symbol">(</span>system<span class="tsd-signature-symbol">: </span><a href="_system_.system.html" class="tsd-signature-type">System</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in Engine.ts:118</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Adds a system to the engine.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>system: <a href="_system_.system.html" class="tsd-signature-type">System</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The system to add.</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-					<a name="addsystems" class="tsd-anchor"></a>
-					<h3>add<wbr>Systems</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Systems<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>systems<span class="tsd-signature-symbol">: </span><a href="_system_.system.html" class="tsd-signature-type">System</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in Engine.ts:132</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Adds a list of systems to the engine.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>systems: <a href="_system_.system.html" class="tsd-signature-type">System</a><span class="tsd-signature-symbol">[]</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The list of systems to add.</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-					<a name="notifyprioritychange" class="tsd-anchor"></a>
-					<h3>notify<wbr>Priority<wbr>Change</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">notify<wbr>Priority<wbr>Change<span class="tsd-signature-symbol">(</span>system<span class="tsd-signature-symbol">: </span><a href="_system_.system.html" class="tsd-signature-type">System</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in Engine.ts:33</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Alerts the engine to sort systems by priority.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>system: <a href="_system_.system.html" class="tsd-signature-type">System</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The system than changed priority</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-					<a name="removeentities" class="tsd-anchor"></a>
-					<h3>remove<wbr>Entities</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">remove<wbr>Entities<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>entities<span class="tsd-signature-symbol">: </span><a href="_entity_.entity.html" class="tsd-signature-type">Entity</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in Engine.ts:107</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Removes a list of entities to the engine.
-									The listeners will be notified once per entity.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>entities: <a href="_entity_.entity.html" class="tsd-signature-type">Entity</a><span class="tsd-signature-symbol">[]</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The list of entities to remove</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-					<a name="removeentity" class="tsd-anchor"></a>
-					<h3>remove<wbr>Entity</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">remove<wbr>Entity<span class="tsd-signature-symbol">(</span>entity<span class="tsd-signature-symbol">: </span><a href="_entity_.entity.html" class="tsd-signature-type">Entity</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in Engine.ts:92</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Removes an entity to the engine.
-									The listeners will be notified.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>entity: <a href="_entity_.entity.html" class="tsd-signature-type">Entity</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The entity to remove</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-					<a name="removeentitylistener" class="tsd-anchor"></a>
-					<h3>remove<wbr>Entity<wbr>Listener</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">remove<wbr>Entity<wbr>Listener<span class="tsd-signature-symbol">(</span>listener<span class="tsd-signature-symbol">: </span><a href="../interfaces/_engine_.engineentitylistener.html" class="tsd-signature-type">EngineEntityListener</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in Engine.ts:52</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Removes a listener from the entity listener list.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>listener: <a href="../interfaces/_engine_.engineentitylistener.html" class="tsd-signature-type">EngineEntityListener</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The listener to remove</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-					<a name="removesystem" class="tsd-anchor"></a>
-					<h3>remove<wbr>System</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">remove<wbr>System<span class="tsd-signature-symbol">(</span>system<span class="tsd-signature-symbol">: </span><a href="_system_.system.html" class="tsd-signature-type">System</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in Engine.ts:142</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Removes a system to the engine.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>system: <a href="_system_.system.html" class="tsd-signature-type">System</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The system to remove.</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-					<a name="removesystems" class="tsd-anchor"></a>
-					<h3>remove<wbr>Systems</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">remove<wbr>Systems<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>systems<span class="tsd-signature-symbol">: </span><a href="_system_.system.html" class="tsd-signature-type">System</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in Engine.ts:155</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Removes a list of systems to the engine.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>systems: <a href="_system_.system.html" class="tsd-signature-type">System</a><span class="tsd-signature-symbol">[]</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The list of systems to remove.</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-					<a name="update" class="tsd-anchor"></a>
-					<h3>update</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">update<span class="tsd-signature-symbol">(</span>delta<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in Engine.ts:165</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Updates all systems added to the engine.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>delta: <span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Time elapsed (in milliseconds) since the last update.</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
+					<div class="tsd-signature tsd-kind-icon">entities<span class="tsd-signature-symbol">:</span> </div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/joaqim/ecs/blob/7a29e66/src/Engine.ts#L26">Engine.ts:26</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 		</div>
@@ -612,6 +188,9 @@
 						<a href="../modules/_family_.html">"<wbr>Family"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="../modules/_reflect_.html">"<wbr>Reflect"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="../modules/_system_.html">"<wbr>System"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -626,6 +205,9 @@
 					<li class="current tsd-kind-class tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_engine_.engine.html" class="tsd-kind-icon">Engine</a>
 						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+								<a href="_engine_.engine.html#entity" class="tsd-kind-icon">Entity</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-not-exported">
 								<a href="_engine_.engine.html#_entities" class="tsd-kind-icon">_entities</a>
 							</li>
@@ -641,48 +223,15 @@
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-not-exported">
 								<a href="_engine_.engine.html#entities" class="tsd-kind-icon">entities</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-								<a href="_engine_.engine.html#addentities" class="tsd-kind-icon">add<wbr>Entities</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-								<a href="_engine_.engine.html#addentity" class="tsd-kind-icon">add<wbr>Entity</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-								<a href="_engine_.engine.html#addentitylistener" class="tsd-kind-icon">add<wbr>Entity<wbr>Listener</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-								<a href="_engine_.engine.html#addsystem" class="tsd-kind-icon">add<wbr>System</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-								<a href="_engine_.engine.html#addsystems" class="tsd-kind-icon">add<wbr>Systems</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-								<a href="_engine_.engine.html#notifyprioritychange" class="tsd-kind-icon">notify<wbr>Priority<wbr>Change</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-								<a href="_engine_.engine.html#removeentities" class="tsd-kind-icon">remove<wbr>Entities</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-								<a href="_engine_.engine.html#removeentity" class="tsd-kind-icon">remove<wbr>Entity</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-								<a href="_engine_.engine.html#removeentitylistener" class="tsd-kind-icon">remove<wbr>Entity<wbr>Listener</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-								<a href="_engine_.engine.html#removesystem" class="tsd-kind-icon">remove<wbr>System</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-								<a href="_engine_.engine.html#removesystems" class="tsd-kind-icon">remove<wbr>Systems</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-								<a href="_engine_.engine.html#update" class="tsd-kind-icon">update</a>
-							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_engine_.engineentitylistener.html" class="tsd-kind-icon">Engine<wbr>Entity<wbr>Listener</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/_engine_.html#index" class="tsd-kind-icon">index</a>
 					</li>
 				</ul>
 			</nav>

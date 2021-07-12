@@ -38,8 +38,6 @@
 							</div>
 							<input type="checkbox" id="tsd-filter-inherited" checked />
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
-							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
 							<input type="checkbox" id="tsd-filter-only-exported" />
 							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
@@ -73,13 +71,25 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Classes</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-class tsd-parent-kind-external-module tsd-is-not-exported"><a href="../classes/_entity_.entity.html" class="tsd-kind-icon">Entity</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-external-module tsd-has-type-parameter tsd-is-not-exported"><a href="../classes/_entity_.entity.html" class="tsd-kind-icon">Entity</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-not-exported">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_entity_.entitychangelistener.html" class="tsd-kind-icon">Entity<wbr>Change<wbr>Listener</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_entity_.html#entitychangelistener" class="tsd-kind-icon">Entity<wbr>Change<wbr>Listener</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_entity_.html#components" class="tsd-kind-icon">Components</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-not-exported">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_entity_.html#primedcomponents" class="tsd-kind-icon">Primed<wbr>Components</a></li>
 							</ul>
 						</section>
 					</div>
@@ -88,35 +98,69 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Type aliases</h2>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="entitychangelistener" class="tsd-anchor"></a>
-					<h3>Entity<wbr>Change<wbr>Listener</h3>
-					<div class="tsd-signature tsd-kind-icon">Entity<wbr>Change<wbr>Listener<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<a name="components" class="tsd-anchor"></a>
+					<h3>Components</h3>
+					<div class="tsd-signature tsd-kind-icon">Components<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in Entity.ts:3</li>
+							<li>Defined in <a href="https://github.com/joaqim/ecs/blob/7a29e66/src/Entity.ts#L10">Entity.ts:10</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
-							<li class="tsd-parameter-siganture">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>entity<span class="tsd-signature-symbol">: </span><a href="../classes/_entity_.entity.html" class="tsd-signature-type">Entity</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>entity: <a href="../classes/_entity_.entity.html" class="tsd-signature-type">Entity</a></h5>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<li class="tsd-parameter-index-signature">
+								<h5><span class="tsd-signature-symbol">[</span>tag: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><a href="../interfaces/_component_.component.html" class="tsd-signature-type">Component</a></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>classes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter-index-signature">
+										<h5><span class="tsd-signature-symbol">[</span>tag: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><a href="../interfaces/_component_.componentclass.html" class="tsd-signature-type">ComponentClass</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_component_.component.html" class="tsd-signature-type">Component</a><span class="tsd-signature-symbol">&gt;</span></h5>
 									</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="primedcomponents" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Primed<wbr>Components</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">Primed<wbr>Components<span class="tsd-signature-symbol">(</span>components<span class="tsd-signature-symbol">?: </span><a href="_entity_.html#components" class="tsd-signature-type">Components</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/joaqim/ecs/blob/7a29e66/src/Entity.ts#L15">Entity.ts:15</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> components: <a href="_entity_.html#components" class="tsd-signature-type">Components</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span></h4>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter-index-signature">
+									<h5><span class="tsd-signature-symbol">[</span>tag: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><a href="../interfaces/_component_.component.html" class="tsd-signature-type">Component</a></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>classes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-index-signature">
+											<h5><span class="tsd-signature-symbol">[</span>tag: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><a href="../interfaces/_component_.componentclass.html" class="tsd-signature-type">ComponentClass</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_component_.component.html" class="tsd-signature-type">Component</a><span class="tsd-signature-symbol">&gt;</span></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -139,6 +183,9 @@
 						<a href="_family_.html">"<wbr>Family"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="_reflect_.html">"<wbr>Reflect"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="_system_.html">"<wbr>System"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -148,11 +195,17 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-has-type-parameter tsd-is-not-exported">
 						<a href="../classes/_entity_.entity.html" class="tsd-kind-icon">Entity</a>
 					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_entity_.entitychangelistener.html" class="tsd-kind-icon">Entity<wbr>Change<wbr>Listener</a>
+					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_entity_.html#entitychangelistener" class="tsd-kind-icon">Entity<wbr>Change<wbr>Listener</a>
+						<a href="_entity_.html#components" class="tsd-kind-icon">Components</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_entity_.html#primedcomponents" class="tsd-kind-icon">Primed<wbr>Components</a>
 					</li>
 				</ul>
 			</nav>
