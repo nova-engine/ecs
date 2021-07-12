@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 interface Component {}
 
 interface ComponentClass<T extends Component> {

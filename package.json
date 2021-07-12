@@ -12,6 +12,7 @@
     "build-all": "npm run build && npm run docs && npm test",
     "precommit": "build-all",
     "lint": "eslint src/ --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint src/ --ext .js,.jsx,.ts,.tsx --fix",
     "prepush": "npm test",
     "test": "jest --maxWorkers=3",
     "test:watch": "jest --watch --maxWorkers=3",

@@ -9,29 +9,29 @@ abstract class System {
     this._engines = [];
   }
 
-  get priority() {
+  get priority(): number {
     return this._priority;
-  }
-
-  get engines() {
-    return Object.freeze(this._engines.slice(0));
   }
 
   set priority(value: number) {
     this._priority = value;
-    for (let engine of this._engines) {
+    for (const engine of this._engines) {
       engine.notifyPriorityChange(this);
     }
   }
 
-  onAttach(engine: Engine) {
+  get engines(): readonly Engine[] {
+    return Object.freeze(this._engines.slice(0));
+  }
+
+  onAttach(engine: Engine): void {
     const index = this._engines.indexOf(engine);
     if (index === -1) {
       this._engines.push(engine);
     }
   }
 
-  onDetach(engine: Engine) {
+  onDetach(engine: Engine): void {
     const index = this._engines.indexOf(engine);
     if (index !== -1) {
       this._engines.splice(index, 1);

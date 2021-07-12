@@ -1,5 +1,5 @@
 import { Component, ComponentClass } from "./Component";
-import { Engine, EngineEntityListener } from "./Engine";
+import { Engine } from "./Engine";
 import { Entity, EntityChangeListener } from "./Entity";
 
 /**
@@ -45,12 +45,12 @@ abstract class AbstractFamily implements Family {
   abstract readonly entities: ReadonlyArray<Entity>;
 
   includesEntity = (entity: Entity) => {
-    for (let include of this._include) {
+    for (const include of this._include) {
       if (!entity.hasComponent(include)) {
         return false;
       }
     }
-    for (let exclude of this._exclude) {
+    for (const exclude of this._exclude) {
       if (entity.hasComponent(exclude)) {
         return false;
       }
@@ -77,7 +77,7 @@ class CachedFamily extends AbstractFamily implements EntityChangeListener {
     const allEntities = this.engine.entities;
     this._entities = allEntities.filter(this.includesEntity);
     this.engine.addEntityListener(this);
-    for (let entity of allEntities) {
+    for (const entity of allEntities) {
       entity.addListener(this);
     }
     this._needEntityRefresh = false;
@@ -108,8 +108,8 @@ class CachedFamily extends AbstractFamily implements EntityChangeListener {
       entity.removeListener(this);
     }
   }
-  
-  onEntityChanged(entity: Entity): void {
+
+  onEntityChanged(): void {
     this._needEntityRefresh = true;
   }
 }
@@ -148,7 +148,7 @@ class FamilyBuilder {
    * HAVE this components.
    * @param classes A list of component classes.
    */
-  include(...classes: ComponentClass<Component>[]) {
+  include(...classes: ComponentClass<Component>[]): FamilyBuilder {
     this._include.push(...classes);
     return this;
   }
@@ -157,7 +157,7 @@ class FamilyBuilder {
    * HAVE this components.
    * @param classes A list of component classes.
    */
-  exclude(...classes: ComponentClass<Component>[]) {
+  exclude(...classes: ComponentClass<Component>[]): FamilyBuilder {
     this._exclude.push(...classes);
     return this;
   }
@@ -168,7 +168,7 @@ class FamilyBuilder {
    * engines.
    * @param engine
    */
-  changeEngine(engine: Engine) {
+  changeEngine(engine: Engine): FamilyBuilder {
     this._engine = engine;
     return this;
   }
@@ -177,7 +177,7 @@ class FamilyBuilder {
    * Changes if the family should use cached values or not.
    * @param cached If the family must use or not a cache.
    */
-  setCached(cached: boolean) {
+  setCached(cached: boolean): void {
     this._cached = cached;
   }
 

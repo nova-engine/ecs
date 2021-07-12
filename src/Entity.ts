@@ -53,7 +53,7 @@ class Entity {
    * Checks if the entity is newly created.
    * An entity is considered new when the id is null.
    */
-  isNew() {
+  isNew(): boolean {
     return this._id === null;
   }
 
@@ -61,8 +61,8 @@ class Entity {
    * Generates a read only list of components of the entity.
    * @returns a list of all components of the entity.
    */
-  listComponents() {
-    return Object.keys(this._components).map(i => this._components[i]);
+  listComponents(): Component[] {
+    return Object.keys(this._components).map((i) => this._components[i]);
   }
 
   /**
@@ -71,10 +71,13 @@ class Entity {
    * @returns a list of all components with types of the entity.
    */
 
-  listComponentsWithTypes() {
-    return Object.keys(this._components).map(i => ({
+  listComponentsWithTypes(): Array<{
+    component: Component;
+    type: ComponentClass<Component>;
+  }> {
+    return Object.keys(this._components).map((i) => ({
       component: this._components[i],
-      type: this._componentClasses[i]
+      type: this._componentClasses[i],
     }));
   }
 
@@ -82,11 +85,11 @@ class Entity {
    * Generates a read only list of components of the entity with it's corresponding tags.
    * @returns a list of all components with tags of the entity.
    */
-  listComponentsWithTags() {
-    return Object.keys(this._components).map(tag =>
+  listComponentsWithTags(): Array<{ tag: string; component: Component }> {
+    return Object.keys(this._components).map((tag) =>
       Object.freeze({
         tag,
-        component: this._components[tag]
+        component: this._components[tag],
       })
     );
   }
@@ -96,7 +99,9 @@ class Entity {
    * @throws if the class than exists on the entity with that tag is different than the asked one.
    * @param componentClass The class of the component.
    */
-  hasComponent<T extends Component>(componentClass: ComponentClass<T>) {
+  hasComponent<T extends Component>(
+    componentClass: ComponentClass<T>
+  ): boolean {
     const tag = componentClass.tag || componentClass.name;
     const component = this._components[tag];
     if (!component) return false;
@@ -149,7 +154,7 @@ class Entity {
     const newComponent = new componentClass();
     this._components[tag] = newComponent;
     this._componentClasses[tag] = componentClass;
-    for (let listener of this._listeners) {
+    for (const listener of this._listeners) {
       listener.onEntityChanged(this);
     }
     return newComponent;
@@ -161,7 +166,9 @@ class Entity {
    * @throws if the class than exists on the entity with that tag is different than the asked one.
    * @param componentClass The class of the component.
    */
-  removeComponent<T extends Component>(componentClass: ComponentClass<T>) {
+  removeComponent<T extends Component>(
+    componentClass: ComponentClass<T>
+  ): void {
     const tag = componentClass.tag || componentClass.name;
     const component = this._components[tag];
     if (!component) {
@@ -173,7 +180,7 @@ class Entity {
       );
     }
     delete this._components[tag];
-    for (let listener of this._listeners) {
+    for (const listener of this._listeners) {
       listener.onEntityChanged(this);
     }
   }
@@ -194,7 +201,7 @@ class Entity {
    * Adds a listener to the entity when components are added or removed.
    * @param listener The listener to add
    */
-  addListener(listener: EntityChangeListener) {
+  addListener(listener: EntityChangeListener): Entity {
     const index = this._listeners.indexOf(listener);
     if (index === -1) {
       this._listeners.push(listener);
@@ -206,7 +213,7 @@ class Entity {
    * Removes a listener from the entity.
    * @param listener The listener to remove.
    */
-  removeListener(listener: EntityChangeListener) {
+  removeListener(listener: EntityChangeListener): Entity {
     const index = this._listeners.indexOf(listener);
     if (index !== -1) {
       this._listeners.splice(index, 1);
