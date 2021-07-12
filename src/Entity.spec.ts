@@ -1,8 +1,15 @@
+import { Base, Model } from "Reflect";
 import { Component } from "./Component";
 
 import { Entity } from "./Entity";
 
-class MyComponent implements Component {}
+@Model
+class MyComponent extends Base<MyComponent> {
+  static readonly tag = "MyComponent";
+
+  val1 = "";
+  val2 = "";
+}
 
 class MyBadTagComponent implements Component {
   static readonly tag = "MyComponent";
@@ -30,6 +37,28 @@ describe("Entities work", function () {
     const entity = new Entity();
     expect(entity.putComponent(MyComponent)).toBeInstanceOf(MyComponent);
     expect(() => entity.hasComponent(MyComponent)).not.toThrow();
+  });
+  it("Can add a component with multiple arguments.", function () {
+    const entity = new Entity();
+    entity.putComponent(MyComponent, { val1: "Value1", val2: "Value2" });
+    expect(entity.getComponent(MyComponent)).toBeDefined();
+    expect(entity.getComponent(MyComponent).val1).toBe("Value1");
+    expect(entity.getComponent(MyComponent).val2).toBe("Value2");
+  });
+  it("Can create Entity from JSON structure", () => {
+    const entity = new Entity({
+      components: {
+        MyComponent: <MyComponent>{
+          val1: "Value1",
+          val2: "Value2",
+        },
+        classes: { MyComponent },
+      },
+    });
+
+    expect(entity.getComponent(MyComponent)).toBeDefined();
+    expect(entity.getComponent(MyComponent).val1).toBe("Value1");
+    expect(entity.getComponent(MyComponent).val2).toBe("Value2");
   });
   it("Throw error when bad class tags override component types.", function () {
     const entity = new Entity();

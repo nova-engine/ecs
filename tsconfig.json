@@ -8,16 +8,17 @@
     "strictNullChecks": true,
     "removeComments": true,
     "preserveConstEnums": true,
+    "experimentalDecorators": true,
     "outDir": "lib",
     "baseUrl": "src",
     "paths": { "src/*": ["src/*"] },
     "sourceMap": true,
     "declaration": true,
     "lib": ["DOM", "ESNext", "ESNext.Promise"],
-    "types": ["jest"]
+    "types": ["jest", "reflect-metadata"]
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts"],
+  "exclude": ["node_modules"],
   "typedocOptions": {
     "out": "docs",
     "entryPoints": "src/index.ts",

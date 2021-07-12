@@ -47,6 +47,7 @@
     "nova-engine"
   ],
   "dependencies": {
+    "reflect-metadata": "^0.1.13",
     "typescript": "^4.3.5"
   }
 }
